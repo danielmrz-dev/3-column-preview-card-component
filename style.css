@@ -22,6 +22,7 @@
 }
 
 body {
+    height: 100vh;
     background-color: var(--color-light-grey);
     display: flex;
     flex-direction: column;
@@ -30,16 +31,10 @@ body {
 }
 
 main {
-    margin: 80px 80px 40px 80px;
     display: flex;
-    flex-direction: column;
-    color: var(--color-light-grey);
-}
-
-.sedans,
-.suvs,
-.luxury {
-    padding: 80px 150px 80px 110px;
+    width: 950px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .sedans,
@@ -47,12 +42,14 @@ main {
 .luxury {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    width: 33.333%;
+    padding: 1% 5.1% 1% 4.2%;
+    gap: 30px;
     background-color: var(--color-orange);
 }
 
 .sedans {
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px 0 0 10px;
 }
 
 .suvs {
@@ -61,46 +58,49 @@ main {
 
 .luxury {
     background-color: var(--color-dark-cyan);
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 10px 10px 0;
 }
 
 .sedans > img,
 .suvs > img,
 .luxury > img {
-    margin-top: 30px;
-    width: 150px;
+    padding-top: 30px;
+    width: 60px;
 }
 
 .sedans > h2,
 .suvs > h2,
 .luxury > h2 {
-    font-size: 6em;
     font-family: var(--font-big-shoulders);
+    color: var(--color-light-grey);
     text-transform: uppercase;
+    font-size: 2.5em;
 }
 
 .sedans > p,
 .suvs > p,
 .luxury > p {
     font-family: var(--font-lexend);
-    font-size: 2.3em;
-    font-weight: 300;
+    color: var(--color-light-grey);
     line-height: 1.8em;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 .sedans > a,
 .suvs > a,
 .luxury > a {
-    text-decoration: none;
-    font-size: 2.2em;
-    text-align: center;
-    font-family: var(--font-lexend);
-    background-color: var(--color-light-grey);
     border: 1px solid var(--color-light-grey);
-    display: inline-block;
-    width: 320px;
-    padding: 30px;
+    background-color: var(--color-light-grey);
+    font-family: var(--font-lexend);
+    font-size: .9em;
+    padding: 15px;
+    margin-top: 40px;
+    width: 150px;
+    text-decoration: none;
+    text-align: center;
     border-radius: 60px;
+    display: inline-block;
     margin-bottom: 20px;
 }
 
@@ -126,8 +126,8 @@ main {
 footer {
     text-align: center;
     font-family: var(--font-big-shoulders);
-    font-size: 2.3em;
-    padding: 0 0 60px;
+    font-size: 1.3em;
+    padding: 0 0 10px;
 }
 
 footer > a {
@@ -141,59 +141,63 @@ footer > a:hover {
     text-decoration: underline;
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: portrait) {
     body {
-        height: 100vh;
+        height: auto;
     }
-
+    
     main {
-        width: 950px;
-        margin: 20px 70px;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
     }
 
     .sedans,
     .suvs,
     .luxury {
-        width: 33.333%;
-        padding: 30px 5%;
-        gap: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        padding: 80px 130px 50px 100px;
+        gap: 50px;
     }
 
     .sedans {
-        border-radius: 10px 0 0 10px;
+        border-radius: 10px 10px 0 0;
     }
-
+    
     .luxury {
-        border-radius: 0 10px 10px 0;
+        border-radius: 0 0 10px 10px;
     }
 
     .sedans > img,
     .suvs > img,
     .luxury > img {
-        width: 60px;
+        padding-top: 10px;
+        width: 150px;
     }
 
     .sedans > h2,
     .suvs > h2,
     .luxury > h2 {
-        font-size: 2.5em;
+        font-size: 5em;
     }
 
     .sedans > p,
     .suvs > p,
     .luxury > p {
-        font-size: 15px;
+        line-height: 1.8em;
+        font-size: 2.3em;
         font-weight: 300;
-    } 
+    }
 
     .sedans > a,
     .suvs > a,
     .luxury > a {
-        font-size: .9em;
-        padding: 15px;
-        margin-top: 40px;
-        width: 150px;
+        font-size: 1.9em;
+        padding: 30px;
+        margin-top: 30px;
+        width: 350px;
+        margin-bottom: 20px;
     }
 }
